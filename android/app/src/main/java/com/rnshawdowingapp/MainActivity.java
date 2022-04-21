@@ -1,5 +1,6 @@
 package com.rnshawdowingapp;
 
+import android.os.Bundle;
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactRootView;
@@ -11,9 +12,15 @@ public class MainActivity extends ReactActivity {
    * rendering of the component.
    */
   @Override
+  protected void onCreate(Bundle savedInstanceState) {
+  super.onCreate(null);
+  }
+  
+  @Override
   protected String getMainComponentName() {
     return "RNshawdowingApp";
   }
+ 
 
   /**
    * Returns the instance of the {@link ReactActivityDelegate}. There the RootView is created and
