@@ -3,4 +3,6 @@ export const Screens = {
   Menu: 'Menu',
   Setting: 'Setting',
   AppTab: 'AppTab',
+  Login: 'Login',
+  Register: 'Register',
 };
