@@ -7,6 +7,8 @@ import {Screens} from './NavigationConfig';
 import Home from './src/components/Home';
 import Menu from './src/components/Menu';
 import Setting from './src/components/Setting';
+import LoginScreen from './src/screens/LoginScreen';
+import RegisterScreen from './src/screens/RegisterScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -33,26 +35,42 @@ function AppTab() {
 }
 
 const AppContainer: React.FC = () => {
+  const isLogined = true;
   const NavigationStack = useMemo(() => {
     return (
       <NavigationContainer>
-        <Stack.Navigator initialRouteName={Screens.AppTab}>
-          <Stack.Screen
-            name={Screens.AppTab}
-            component={AppTab}
-            options={{title: 'Home'}}
-          />
-          <Stack.Screen
-            name={Screens.Home}
-            component={Home}
-            options={{title: 'Home'}}
-          />
-          <Stack.Screen
-            name={Screens.Menu}
-            component={Menu}
-            options={{title: 'Menu'}}
-          />
-        </Stack.Navigator>
+        {!isLogined ? (
+          <Stack.Navigator initialRouteName={Screens.AppTab}>
+            <Stack.Screen
+              name={Screens.AppTab}
+              component={AppTab}
+              options={{title: 'Home'}}
+            />
+            <Stack.Screen
+              name={Screens.Home}
+              component={Home}
+              options={{title: 'Home'}}
+            />
+            <Stack.Screen
+              name={Screens.Menu}
+              component={Menu}
+              options={{title: 'Menu'}}
+            />
+          </Stack.Navigator>
+        ) : (
+          <Stack.Navigator>
+            <Stack.Screen
+              name={Screens.Login}
+              component={LoginScreen}
+              options={{headerShown: false}}
+            />
+            <Stack.Screen
+              name={Screens.Register}
+              component={RegisterScreen}
+              options={{headerShown: false}}
+            />
+          </Stack.Navigator>
+        )}
       </NavigationContainer>
     );
   }, []);

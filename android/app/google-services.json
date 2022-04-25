@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "853314952153",
+    "project_id": "shadowingenglish-f3c2e",
+    "storage_bucket": "shadowingenglish-f3c2e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:853314952153:android:fdde9ec14f78101ef917c8",
+        "android_client_info": {
+          "package_name": "com.rnshawdowingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "853314952153-ibs4i4q2jtdnbs38cc400rfal5c1d11a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRj8wP6hiQi2UeAcVvVPIeA273Kt5V2NY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "853314952153-ibs4i4q2jtdnbs38cc400rfal5c1d11a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "853314952153-s8dou4cmrqegj7aqminb2rrmbud302bl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.RNshawdowingApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
